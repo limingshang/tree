@@ -12,10 +12,10 @@
 
 package main
 
-import "github.com/limingshang/tree/preface"
+import "github.com/limingshang/tree/balance"
 
 func main() {
-	prefaceTree()
+	balanceTree()
 }
 
 func prefaceTree()  {
@@ -27,20 +27,33 @@ func prefaceTree()  {
 	//      6   8
 	//    5
 
-	var node preface.Node
-	preface.Insert(&node, 20)
-	preface.Insert(&node, 10)
-	preface.Insert(&node, 30)
-	preface.Insert(&node, 50)
-	preface.Insert(&node, 60)
-	preface.Insert(&node, 40)
-	preface.Insert(&node, 4)
-	preface.Insert(&node, 3)
-	preface.Insert(&node, 7)
-	preface.Insert(&node, 8)
-	preface.Insert(&node, 6)
-	preface.Insert(&node, 5)
-	preface.AfterRange(node)
+	//var node preface.Node
+	//preface.Insert(&node, 20)
+	//preface.Insert(&node, 10)
+	//preface.Insert(&node, 30)
+	//preface.Insert(&node, 50)
+	//preface.Insert(&node, 60)
+	//preface.Insert(&node, 40)
+	//preface.Insert(&node, 4)
+	//preface.Insert(&node, 3)
+	//preface.Insert(&node, 7)
+	//preface.Insert(&node, 8)
+	//preface.Insert(&node, 6)
+	//preface.Insert(&node, 5)
+	//preface.AfterRange(node)
 	//preface.MiddleRange(node)
 	//fmt.Println(node)
+}
+
+func balanceTree()  {
+	node := balance.CreateNode(100)
+	balance.InsertNode(&node, 20)
+	balance.InsertNode(&node, 30)
+	balance.InsertNode(&node, 40)
+	balance.InsertNode(&node, 50)
+	balance.InsertNode(&node, 60)
+	balance.InsertNode(&node, 70)
+	balance.InsertNode(&node, 120)
+
+	balance.AfterRange(node)
 }

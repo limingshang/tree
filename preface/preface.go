@@ -15,18 +15,16 @@ package preface
 import "fmt"
 
 type Node struct {
-	value  int   // 当前节点值
-	left   *Node // 当前节点的左节点
-	right  *Node // 当前节点的右节点
-	height int   // 当前节点所在的高度
+	value int   // 当前节点值
+	left  *Node // 当前节点的左节点
+	right *Node // 当前节点的右节点
 }
 
 func createNode(value int) Node {
 	return Node{
-		value:  value,
-		left:   &Node{},
-		right:  &Node{},
-		height: value,
+		value: value,
+		left:  &Node{},
+		right: &Node{},
 	}
 }
 func Insert(node *Node, value int) {
