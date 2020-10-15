@@ -14,19 +14,20 @@ package balance
 
 import (
 	"fmt"
+	"github.com/limingshang/tree/node"
 	"math"
 )
 
-type Node struct {
-	value  int     // 当前节点值
-	left   *Node   // 当前节点的左节点
-	right  *Node   // 当前节点的右节点
-	height float64 // 当前节点的高度
-}
+//type Node struct {
+//	value  int     // 当前节点值
+//	left   *Node   // 当前节点的左节点
+//	right  *Node   // 当前节点的右节点
+//	height float64 // 当前节点的高度
+//}
 
 // 初始化创建根节点
-func CreateNode(value int) Node {
-	return Node{
+func CreateNode(value int) node.Node {
+	return node.Node{
 		value:  value,
 		left:   &Node{},
 		right:  &Node{},
