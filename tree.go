@@ -13,8 +13,6 @@
 package main
 
 import "tree/balance"
-
-
 func main()  {
 	balanceTree()
 }
@@ -28,7 +26,7 @@ func balanceTree()  {
 	balance.InsertNode(&node, 20)
 	balance.InsertNode(&node, 40)
 	balance.InsertNode(&node, 120)
-	balance.MiddleRange(node)
+	node.MiddleRange()
 }
 
 

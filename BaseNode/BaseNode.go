@@ -10,7 +10,7 @@
 // | Date:  8:24 下午
 // +----------------------------------------------------------------------
 
-package node
+package BaseNode
 
 import "fmt"
 
@@ -35,17 +35,17 @@ func (n Node) AfterRange() {
 // 中序遍历
 func (n Node) MiddleRange() {
 	if n != (Node{}) {
-		n.Left.AfterRange()
+		n.Left.MiddleRange()
 		fmt.Println(n.Value)
-		n.Right.AfterRange()
+		n.Right.MiddleRange()
 	}
 }
 
 // 后序遍历
 func (n Node) FloorRange() {
 	if n != (Node{}) {
-		n.Left.AfterRange()
-		n.Right.AfterRange()
+		n.Left.FloorRange()
+		n.Right.FloorRange()
 		fmt.Println(n.Value)
 	}
 }
