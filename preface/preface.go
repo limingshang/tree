@@ -12,8 +12,6 @@
 
 package preface
 
-import "fmt"
-
 type Node struct {
 	value int   // 当前节点值
 	left  *Node // 当前节点的左节点
@@ -27,6 +25,7 @@ func createNode(value int) Node {
 		right: &Node{},
 	}
 }
+// 此是插入操作，删除很简单，左节点的最右节点上移活着右节点最左节点上移到要删除的节点就可以了
 func Insert(node *Node, value int) {
 	if *node == (Node{}) {
 		*node = createNode(value)
@@ -48,24 +47,4 @@ func Insert(node *Node, value int) {
 	}
 }
 
-func AfterRange(node Node) {
-	if node != (Node{}) {
-		fmt.Println(node.value)
-		AfterRange(*node.left)
-		AfterRange(*node.right)
-	}
-}
-func MiddleRange(node Node) {
-	if node != (Node{}) {
-		MiddleRange(*node.left)
-		fmt.Println(node.value)
-		MiddleRange(*node.right)
-	}
-}
-func FloorRange(node Node) {
-	if node != (Node{}) {
-		FloorRange(*node.left)
-		FloorRange(*node.right)
-		fmt.Println(node.value)
-	}
-}
+

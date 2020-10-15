@@ -14,46 +14,44 @@ package main
 
 import "github.com/limingshang/tree/balance"
 
-func main() {
+//func prefaceTree()  {
+//	// 普通树插入因为不涉及各种计算，直接对比下一个节点的大小做插入，所以最后执行的结果为
+//	//              20
+//	//        10       30
+//	//     4               50
+//	// 3      7         40    60
+//	//      6   8
+//	//    5
+//
+//	//var node preface.Node
+//	//preface.Insert(&node, 20)
+//	//preface.Insert(&node, 10)
+//	//preface.Insert(&node, 30)
+//	//preface.Insert(&node, 50)
+//	//preface.Insert(&node, 60)
+//	//preface.Insert(&node, 40)
+//	//preface.Insert(&node, 4)
+//	//preface.Insert(&node, 3)
+//	//preface.Insert(&node, 7)
+//	//preface.Insert(&node, 8)
+//	//preface.Insert(&node, 6)
+//	//preface.Insert(&node, 5)
+//	//preface.AfterRange(node)
+//	//preface.MiddleRange(node)
+//	//fmt.Println(node)
+//}
+func main()  {
 	balanceTree()
 }
 
-func prefaceTree()  {
-	// 普通树插入因为不涉及各种计算，直接对比下一个节点的大小做插入，所以最后执行的结果为
-	//              20
-	//        10       30
-	//     4               50
-	// 3      7         40    60
-	//      6   8
-	//    5
-
-	//var node preface.Node
-	//preface.Insert(&node, 20)
-	//preface.Insert(&node, 10)
-	//preface.Insert(&node, 30)
-	//preface.Insert(&node, 50)
-	//preface.Insert(&node, 60)
-	//preface.Insert(&node, 40)
-	//preface.Insert(&node, 4)
-	//preface.Insert(&node, 3)
-	//preface.Insert(&node, 7)
-	//preface.Insert(&node, 8)
-	//preface.Insert(&node, 6)
-	//preface.Insert(&node, 5)
-	//preface.AfterRange(node)
-	//preface.MiddleRange(node)
-	//fmt.Println(node)
-}
-
 func balanceTree()  {
-	node := balance.CreateNode(100)
-	balance.InsertNode(&node, 20)
-	balance.InsertNode(&node, 30)
-	balance.InsertNode(&node, 40)
+	node:= balance.CreateNode(10)
 	balance.InsertNode(&node, 50)
 	balance.InsertNode(&node, 60)
+	balance.InsertNode(&node, 30)
 	balance.InsertNode(&node, 70)
+	balance.InsertNode(&node, 20)
+	balance.InsertNode(&node, 40)
 	balance.InsertNode(&node, 120)
-
-	balance.AfterRange(node)
+	balance.MiddleRange(node)
 }
